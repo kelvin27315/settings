@@ -1,1 +1,1 @@
-import = ["~/.config/alacritty/github_dark_high_contrast.toml"]
+import = ["~/.config/alacritty/colors/seashells.toml"]
