@@ -1,0 +1,69 @@
+# https://gogh-co.github.io/Gogh/
+# Sea Shells
+format = """
+[░▒▓](#D15123)\
+[  ](bg:#D15123 fg:#FDD39F)\
+[](bg:#1E4950 fg:#D15123)\
+$directory\
+[](fg:#1E4950 bg:#027C9B)\
+$git_branch\
+$git_status\
+[](fg:#027C9B bg:#FCA02F)\
+$nodejs\
+$rust\
+$golang\
+$php\
+[](fg:#FCA02F bg:#17384C)\
+$time\
+[ ](fg:#17384C)\
+\n$character"""
+
+[directory]
+style = "fg:#FDD39F bg:#1E4950"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:#027C9B"
+format = '[[ $symbol $branch ](fg:#BBE3EE bg:#027C9B)]($style)'
+
+[git_status]
+style = "bg:#027C9B"
+format = '[[($all_status$ahead_behind )](fg:#BBE3EE bg:#027C9B)]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:#FCA02F"
+format = '[[ $symbol ($version) ](fg:#17384C bg:#FCA02F)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#FCA02F"
+format = '[[ $symbol ($version) ](fg:#17384C bg:#FCA02F)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#FCA02F"
+format = '[[ $symbol ($version) ](fg:#17384C bg:#FCA02F)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#FCA02F"
+format = '[[ $symbol ($version) ](fg:#17384C bg:#FCA02F)]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:#17384C"
+format = '[[  $time ](fg:#BBE3EE bg:#17384C)]($style)'
+
+[battery]
+disabled = true
