@@ -1,0 +1,9 @@
+set number
+set title
+set showmatch
+set matchtime=1
+syntax on
+set smartindent
+set shiftwidth=2
+set softtabstop=2
+set expandtab
